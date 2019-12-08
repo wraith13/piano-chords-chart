@@ -1,0 +1,173 @@
+*
+{
+    font-family: "MS Gothic";
+    color: #000022;
+}
+body
+{
+    margin: 1rem;
+}
+h1
+{
+    margin: -1rem;
+    margin-bottom: 0em;
+    padding: 1rem;
+    color: #FFFFFF;
+    background-color: #000022;
+}
+input.filter
+{
+    box-sizing: border-box;
+    width: 322px;
+    min-width: 240px;
+    font-size: 1.2rem;
+}
+.github
+{
+    float: right;
+    margin-top: 1rem;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #000022;
+}
+
+.filter-panel
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.keys
+{
+    display: inline-flex;
+    .octave
+    {
+        display: inline-flex;
+        .key
+        {
+            display: inline-flex;
+            border-color: #111144;
+            border-style: solid;
+            border-width: 0.5px;
+            box-sizing: border-box;
+            justify-content: center;
+    
+            &.c, &.d, &.e, &.f, &.g, &.a, &.b
+            {
+                background-color: #F8F8F8;
+                height: 75px;
+                width: 23px;
+
+                &.mark
+                {
+                    background-color: #F88888;
+
+                    &::after
+                    {
+                        border-color: #111144;
+                    }
+                }
+            }
+            &.cs, &.ds, &.fs, &.gs, &.as
+            {
+                background-color: #111144;
+                height: 47.5px;
+                margin-bottom: auto;
+                width: 12px;
+                z-index: 1;
+                position: relative;
+
+                &.mark
+                {
+                    background-color: #991144;
+
+                    &::after
+                    {
+                        border-color: #F8F8F8;
+                    }
+                }
+            }
+            &.cs
+            {
+                margin-left: -8px;
+                margin-right: -4px;
+            }
+            &.ds
+            {
+                margin-left: -4px;
+                margin-right: -8px;
+            }
+            &.fs
+            {
+                margin-left: -9px;
+                margin-right: -3px;
+            }
+            &.gs
+            {
+                margin-left: -6px;
+                margin-right: -6px;
+            }
+            &.as
+            {
+                margin-left: -3px;
+                margin-right: -9px;
+            }
+    
+            &.mark::after
+            {
+                display: inline-block;
+                border-radius: 1rem;
+                width: 10px;
+                height: 10px;
+                margin-bottom: 4px;
+                background-color: #EE4488;
+                border-style: solid;
+                border-width: 1px;
+                box-sizing: border-box;
+                content: " ";
+                align-self: flex-end;
+            }
+        }
+
+        &.high
+        {
+            .key
+            {
+                &.c, &.d, &.e, &.f, &.g, &.a, &.b
+                {
+    
+                    &.mark
+                    {
+                        background-color: #8888F8;
+                    }
+                }
+                &.cs, &.ds, &.fs, &.gs, &.as
+                {
+                    &.mark
+                    {
+                        background-color: #4444DD;
+                    }
+                }
+                &.mark::after
+                {
+                    background-color: #AA88FF;
+                }
+            }
+        }
+    }
+}
+
+.chord
+{
+    display: inline-flex;
+    flex-direction: column;
+    margin: 4px;
+
+    .name
+    {
+        font-weight: 700;
+    }
+}
