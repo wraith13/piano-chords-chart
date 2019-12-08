@@ -1,3 +1,3 @@
 # Piano Chords Chart
 
-live site: <http://wraith13.github.io/piano-chords-chart/>
+live site: <https://wraith13.github.io/piano-chords-chart/>
