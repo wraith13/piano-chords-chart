@@ -134,23 +134,42 @@ input.filter {
   content: " ";
   align-self: flex-end;
 }
-.keys .octave.high .key.c.mark,
-.keys .octave.high .key.d.mark,
-.keys .octave.high .key.e.mark,
-.keys .octave.high .key.f.mark,
-.keys .octave.high .key.g.mark,
-.keys .octave.high .key.a.mark,
-.keys .octave.high .key.b.mark {
+.keys .octave.o1 .key.c.mark,
+.keys .octave.o1 .key.d.mark,
+.keys .octave.o1 .key.e.mark,
+.keys .octave.o1 .key.f.mark,
+.keys .octave.o1 .key.g.mark,
+.keys .octave.o1 .key.a.mark,
+.keys .octave.o1 .key.b.mark {
+  background-color: #AAF8AA;
+}
+.keys .octave.o1 .key.cs.mark,
+.keys .octave.o1 .key.ds.mark,
+.keys .octave.o1 .key.fs.mark,
+.keys .octave.o1 .key.gs.mark,
+.keys .octave.o1 .key.as.mark {
+  background-color: #448844;
+}
+.keys .octave.o1 .key.mark::after {
+  background-color: #88FF88;
+}
+.keys .octave.o2 .key.c.mark,
+.keys .octave.o2 .key.d.mark,
+.keys .octave.o2 .key.e.mark,
+.keys .octave.o2 .key.f.mark,
+.keys .octave.o2 .key.g.mark,
+.keys .octave.o2 .key.a.mark,
+.keys .octave.o2 .key.b.mark {
   background-color: #8888F8;
 }
-.keys .octave.high .key.cs.mark,
-.keys .octave.high .key.ds.mark,
-.keys .octave.high .key.fs.mark,
-.keys .octave.high .key.gs.mark,
-.keys .octave.high .key.as.mark {
+.keys .octave.o2 .key.cs.mark,
+.keys .octave.o2 .key.ds.mark,
+.keys .octave.o2 .key.fs.mark,
+.keys .octave.o2 .key.gs.mark,
+.keys .octave.o2 .key.as.mark {
   background-color: #4444DD;
 }
-.keys .octave.high .key.mark::after {
+.keys .octave.o2 .key.mark::after {
   background-color: #AA88FF;
 }
 .chord {

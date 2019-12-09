@@ -62,10 +62,9 @@ var PianoChordsChart;
         });
     };
     var renderOctave = function (level, chord) {
-        if (level === void 0) { level = 0; }
         return ({
             tag: "div",
-            className: ["octave", 0 < level ? "high" : ""].filter(function (i) { return "" !== i; }).join(" "),
+            className: ["octave", "o" + level].filter(function (i) { return "" !== i; }).join(" "),
             children: keys.map(function (i, index) { return renderKey(i, undefined === chord ?
                 undefined :
                 chord.some(function (x) { return x === (level * 12) + index; })); })
@@ -102,6 +101,7 @@ var PianoChordsChart;
                 children: [
                     renderOctave(0),
                     renderOctave(1),
+                    renderOctave(2),
                 ],
             });
             textFilter = minamo_js_1.minamo.dom.make(HTMLInputElement)({
@@ -139,8 +139,9 @@ var PianoChordsChart;
                                 tag: "div",
                                 className: "keys",
                                 children: [
-                                    renderOctave(0, entry.chord.map(function (i) { return (i + index) % 24; })),
-                                    renderOctave(1, entry.chord.map(function (i) { return (i + index) % 24; })),
+                                    renderOctave(0, entry.chord.map(function (i) { return i + index; })),
+                                    renderOctave(1, entry.chord.map(function (i) { return i + index; })),
+                                    renderOctave(2, entry.chord.map(function (i) { return i + index; })),
                                 ],
                             }
                         ],

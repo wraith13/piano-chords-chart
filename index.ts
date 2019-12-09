@@ -20,10 +20,10 @@ export module PianoChordsChart
         className: ["key", key, true === mark ? "mark": ""].filter(i => "" !== i).join(" "),
         onclick: undefined !== mark ? undefined: () => eval("this.classList.toggle('mark')"),
     });
-    const renderOctave = (level: number = 0, chord?: number[]) =>
+    const renderOctave = (level: number, chord?: number[]) =>
     ({
         tag: "div",
-        className: ["octave", 0 < level ? "high": ""].filter(i => "" !== i).join(" "),
+        className: ["octave", `o${level}`].filter(i => "" !== i).join(" "),
         children: keys.map
         (
             (i, index) => renderKey
@@ -80,6 +80,7 @@ export module PianoChordsChart
             [
                 renderOctave(0),
                 renderOctave(1),
+                renderOctave(2),
             ],
         });
         const textFilter = minamo.dom.make(HTMLInputElement)
@@ -130,8 +131,9 @@ export module PianoChordsChart
                                     className: "keys",
                                     children:
                                     [
-                                        renderOctave(0, entry.chord.map(i => (i +index) %24)),
-                                        renderOctave(1, entry.chord.map(i => (i +index) %24)),
+                                        renderOctave(0, entry.chord.map(i => i +index)),
+                                        renderOctave(1, entry.chord.map(i => i +index)),
+                                        renderOctave(2, entry.chord.map(i => i +index)),
                                     ],
                                 }
                             ],

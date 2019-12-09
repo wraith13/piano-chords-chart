@@ -132,7 +132,33 @@ input.filter
             }
         }
 
-        &.high
+        &.o1
+        {
+            .key
+            {
+                &.c, &.d, &.e, &.f, &.g, &.a, &.b
+                {
+    
+                    &.mark
+                    {
+                        background-color: #AAF8AA;
+                    }
+                }
+                &.cs, &.ds, &.fs, &.gs, &.as
+                {
+                    &.mark
+                    {
+                        background-color: #448844;
+                    }
+                }
+                &.mark::after
+                {
+                    background-color: #88FF88;
+                }
+            }
+        }
+
+        &.o2
         {
             .key
             {
