@@ -55,7 +55,7 @@ export module PianoChordsChart
         const filter = () =>
         {
             const chord = getChord(keysFilter);
-            const value = textFilter.value.trim();
+            const value = new RegExp(textFilter.value.trim());
             Array.from(document.getElementsByClassName("chord")).forEach
             (
                 i =>
@@ -63,7 +63,7 @@ export module PianoChordsChart
                     const iChord = getChord(<HTMLDivElement>i);
                     (<HTMLDivElement>i).style.display =
                     (
-                        0 <= (<HTMLDivElement>i.getElementsByClassName("name")[0]).innerText.indexOf(value) &&
+                        value.test((<HTMLDivElement>i.getElementsByClassName("name")[0]).innerText) &&
                         chord.filter(key => iChord.indexOf(key) < 0).length <= 0
                     )
                     ?

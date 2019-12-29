@@ -84,11 +84,11 @@ var PianoChordsChart;
             };
             filter = function () {
                 var chord = getChord(keysFilter);
-                var value = textFilter.value.trim();
+                var value = new RegExp(textFilter.value.trim());
                 Array.from(document.getElementsByClassName("chord")).forEach(function (i) {
                     var iChord = getChord(i);
                     i.style.display =
-                        (0 <= i.getElementsByClassName("name")[0].innerText.indexOf(value) &&
+                        (value.test(i.getElementsByClassName("name")[0].innerText) &&
                             chord.filter(function (key) { return iChord.indexOf(key) < 0; }).length <= 0)
                             ?
                                 "inline-flex" :
