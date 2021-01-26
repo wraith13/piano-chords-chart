@@ -20,6 +20,10 @@
         "chord": [0, 5, 7]
     },
     {
+        "suffix": "sus2",
+        "chord": [0, 2, 7]
+    },
+    {
         "suffix": "7",
         "chord": [0, 4, 7, 10]
     },
@@ -122,6 +126,10 @@
     {
         "suffix": "dim7",
         "chord": [0, 3, 6, 9]
+    },
+    {
+        "suffix": "dimM7",
+        "chord": [0, 3, 6, 11]
     },
     {
         "suffix": "aug",
